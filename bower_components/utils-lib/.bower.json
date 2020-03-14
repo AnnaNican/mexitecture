@@ -1,0 +1,22 @@
+{
+  "name": "utils-lib",
+  "description": "Global namespace with some utilities functions for PolymerVis.",
+  "main": "utils-lib.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "homepage": "https://github.com/PolymerVis/utils-lib",
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "6c91fa62c8eb2530a230c1fdc3e2a9805e8297d5"
+  },
+  "_source": "https://github.com/PolymerVis/utils-lib.git",
+  "_target": "^2.0.0",
+  "_originalSource": "PolymerVis/utils-lib"
+}
