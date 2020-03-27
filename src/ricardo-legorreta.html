@@ -33,7 +33,7 @@
               text-align: center;
               font-size: 11px;
               line-height: 11px;
-              background-image:url("/src/marker-legoretta.png");
+              background-image:url("/images/marker-legoretta.png");
               background-size:100% auto;
               cursor: pointer;
             };
@@ -124,14 +124,6 @@
 
     class RicardoLegorreta extends Polymer.Element {
       static get is() { return 'ricardo-legorreta'; }
-    }
-
-
-    handleClick = function(e, details) {
-      var {lngLat: { lat, lng }} = details;
-      this.lat = lat.toFixed(2);
-      this.lng = lng.toFixed(2);
-      this.opened = true;
     }
 
     window.customElements.define(RicardoLegorreta.is, RicardoLegorreta);
