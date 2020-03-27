@@ -1242,8 +1242,24 @@
     }
   },
   "src/mexico-city.html": {
-    "bower_components/polymer/polymer-element.html": {
+    "bower_components/webcomponentsjs/webcomponents-loader.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "bower_components/polymer/polymer.html": {
       "type": "document",
+      "weight": 1
+    },
+    "bower_components/polymer/lib/legacy/legacy-element-mixin.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/shadycss/apply-shim.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/shadycss/apply-shim.min.js": {
+      "type": "script",
       "weight": 1
     },
     "bower_components/polymer/lib/mixins/element-mixin.html": {
@@ -1310,59 +1326,15 @@
       "type": "document",
       "weight": 1
     },
-    "bower_components/polymer/lib/utils/html-tag.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/shared-styles.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/mapbox-gl/mapbox-gl.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/lib/utils/debounce.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/lib/utils/render-status.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/lib/utils/flattened-nodes-observer.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/lib/utils/array-splice.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/iron-resizable-behavior/iron-resizable-behavior.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/polymer.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/polymer/lib/legacy/legacy-element-mixin.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/shadycss/apply-shim.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/shadycss/apply-shim.min.js": {
-      "type": "script",
-      "weight": 1
-    },
     "bower_components/polymer/lib/mixins/gesture-event-listeners.html": {
       "type": "document",
       "weight": 1
     },
     "bower_components/polymer/lib/utils/gestures.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/polymer/lib/utils/debounce.html": {
       "type": "document",
       "weight": 1
     },
@@ -1374,11 +1346,23 @@
       "type": "document",
       "weight": 1
     },
+    "bower_components/polymer/lib/utils/render-status.html": {
+      "type": "document",
+      "weight": 1
+    },
     "bower_components/polymer/lib/utils/unresolved.html": {
       "type": "document",
       "weight": 1
     },
     "bower_components/polymer/lib/legacy/polymer.dom.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/polymer/lib/utils/flattened-nodes-observer.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/polymer/lib/utils/array-splice.html": {
       "type": "document",
       "weight": 1
     },
@@ -1414,6 +1398,14 @@
       "type": "document",
       "weight": 1
     },
+    "bower_components/polymer/polymer-element.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/polymer/lib/utils/html-tag.html": {
+      "type": "document",
+      "weight": 1
+    },
     "bower_components/polymer/lib/elements/dom-if.html": {
       "type": "document",
       "weight": 1
@@ -1438,11 +1430,35 @@
       "type": "document",
       "weight": 1
     },
+    "src/shared-styles.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/mapbox-gl/mapbox-gl.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-resizable-behavior/iron-resizable-behavior.html": {
+      "type": "document",
+      "weight": 1
+    },
     "bower_components/utils-lib/utils-lib.html": {
       "type": "document",
       "weight": 1
     },
     "bower_components/utils-lib/utils-lib.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "bower_components/mapbox-gl/mapbox-gl-marker.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/mapbox-gl/mapbox-gl-popup.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/mapbox-gl/mapbox-gl-popup.js": {
       "type": "script",
       "weight": 1
     }
