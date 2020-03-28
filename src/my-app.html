@@ -42,10 +42,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        --app-primary-color: #4285f4;
-        --app-secondary-color: black;
-
-
+        --app-primary-color: #2E71B4;
+        --app-secondary-color: #596778;
         --app-drawer-width: 40%;
 
 
@@ -66,7 +64,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .drawer-list {
-        margin: 0 20px;
+        margin: 0 30px;
+        font-Family: 'Raleway', Sans-Serif;
       }
 
       .drawer-list a {
@@ -83,7 +82,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .logo {
-        background: -webkit-linear-gradient(left, #D74B28, #D74B28 25%, #F8B1D3 25%, #F8B1D3 50%, #83534F 50%, #83534F 75%, #8893AC 75%);
+        /*background: -webkit-linear-gradient(left, #D74B28, #D74B28 25%, #F8B1D3 25%, #F8B1D3 50%, #83534F 50%, #83534F 75%, #8893AC 75%);*/
+        background: -webkit-linear-gradient(left, #2E71B4, #2E71B4 25%, #C1D1E0 25%, #C1D1E0 50%, #DF975D 50%, #DF975D 75%, #ECEAEB 75%);
         font-family: sans-serif;
         color: rgba(0, 0, 0, 0);
         font-size: 12px;
@@ -116,8 +116,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <!--           <a name="view1" href="[[rootPath]]view1">View One</a>
           <a name="view2" href="[[rootPath]]view2">View Two</a>
           <a name="view3" href="[[rootPath]]view3">View Three</a> -->
-          <a name="landing-page" href="[[rootPath]]landing-page">Landing</a>
+          <!-- <a name="landing-page" href="[[rootPath]]landing-page">Landing</a> -->
           <a name="mexico-city" href="[[rootPath]]mexico-city">Around Mexico City</a>  
+          <h3>Buildings by Architect</h3>
           <a name="augusto-alvarez" href="[[rootPath]]augusto-alvarez">Augusto H. Alvarez</a>
            <a name="agustin-hernandez" href="[[rootPath]]agustin-hernandez">Agustin Hernandez</a>
            <a name="luis-barragan" href="[[rootPath]]luis-barragan">Luis Barragan</a>
@@ -125,6 +126,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a name="pedro-ramirez-vasquez" href="[[rootPath]]pedro-ramirez-vasquez">Pedro Ramírez Vázquez</a>
           <a name="ricardo-legorreta" href="[[rootPath]]ricardo-legorreta">Ricardo Legorreta</a>
           <a name="teodoro-de-leon" href="[[rootPath]]teodoro-de-leon">Teodoro González de León</a>
+          <div>about project</div>
         </iron-selector>
       </app-drawer>
 
@@ -193,7 +195,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _routePageChanged(page) {
         // If no page was found in the route data, page will be an empty string.
         // Default to 'view1' in that case.
-        this.page = page || 'mexitecture';
+        this.page = page || 'landing-page';
 
         // Close a non-persistent drawer when the page & route are changed.
         if (!this.$.drawer.persistent) {

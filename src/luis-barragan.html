@@ -39,11 +39,30 @@
             };
 
             --mapbox-gl-popup: {
-              bottom:"[0,0]"
+              width: 50;
             };
 
 
-                }
+      /*      --mapbox-gl-popup: {
+              bottom:"[0,0]";
+              left: 100;
+              overflow-y: scroll;
+              overflow-x: scroll;
+            };
+
+          --mapboxgl-popup: {
+              bottom:"[0,0]";
+              width: 50px;
+              overflow-y: scroll;
+              overflow-x: scroll;
+            };
+
+           --mapboxgl-popup-content: {
+              width: 100px;
+              background-color: red;
+              background: red;
+            };*/
+          };
 
     </style>
 
@@ -76,16 +95,15 @@
       <mapbox-gl-marker id="casa-baragan"
         latitude=19.4105 longitude=-99.1917>
       </mapbox-gl-marker>
-
       <mapbox-gl-popup close-button close-on-click for="casa-baragan"
         latitude=19.4105 longitude=-99.1917
-        html="Hello! This is a demo of a <b>popup</b>!">
+        style="color:red;"
+        html="<b>Casa Estudio Luis Barragan</b> is the house of the architect with original rooms and objects. It was declared UNESCO World Heritage Site in 2004. According to the declaration, it 'represent a masterpiece of the new development in the Modern Movement, integrating traditional, phylosophical, and artistic currents into a new synthesis.<p>">
       </mapbox-gl-popup>
 
       <mapbox-gl-marker id="casa-giraldi"
         latitude=19.4142 longitude=-99.1884>
       </mapbox-gl-marker>
-
       <mapbox-gl-popup close-button close-on-click for="casa-giraldi"
         latitude=19.4142 longitude=-99.1884
         html="<b>Casa Giraldi</b><p>...">
@@ -98,7 +116,8 @@
 
       <mapbox-gl-popup close-button close-on-click for="casa-pedregal"
         latitude=19.3192 longitude=-99.2305
-        html="Casa Pedregal, formerly Casa Prieto, is the largest home ever designed by the late Mexican architect Luis Barragán. The Prieto family inhabited it from 1951 to 2013, a period during which the building underwent significant changes by the hands of its proprietors. Upon acquiring it, its current owner César Cervantes hired architect Jorge Covarrubias to restore the home.">
+        style="max-width: 50"
+        html="<b>Casa Pedregal</b>, formerly Casa Prieto, is the largest home ever designed by the late Mexican architect Luis Barragán. The Prieto family inhabited it from 1951 to 2013, a period during which the building underwent significant changes by the hands of its proprietors. Upon acquiring it, its current owner César Cervantes hired architect Jorge Covarrubias to restore the home.">
       </mapbox-gl-popup>
 
       <mapbox-gl-marker id="casa-cristobal"
@@ -117,6 +136,15 @@
       <mapbox-gl-popup close-button close-on-click for="capilla"
         latitude=19.2882 longitude=-99.1643
         html="Deeply religious, the master filled his works with peacefulness and serenity, using a clearly Mexican formal vocabulary, the expressive tectonic nature of the materials, the sublime use of light and an elaborated yet simple treatment of space.">
+      </mapbox-gl-popup>
+
+      <mapbox-gl-marker id="building-5"
+        latitude=19.4992 longitude=-99.2390>
+      </mapbox-gl-marker>
+
+      <mapbox-gl-popup close-button close-on-click for="building-5"
+        latitude=19.2882 longitude=-99.1643
+        html="<b>Torres de Satélite</b> is an urban sculpture that marks thr entrance to Ciuddad Satelite resedentials development. The brightly colored towers brought a certain international exposure to mexican architecture.">
       </mapbox-gl-popup>
 
     </mapbox-gl>
