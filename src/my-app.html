@@ -135,7 +135,8 @@
         tail="{{subroute}}">
     </app-route>
 
-    <app-drawer-layout fullbleed narrow="{{narrow}}">
+    <app-drawer-layout fullbleed> 
+    <!-- <narrow="{{narrow}}"> -->
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]" opened>
 
@@ -152,9 +153,11 @@
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <!-- <a name="landing-page" href="[[rootPath]]landing-page">Landing</a> -->
           <a name="mexico-city" href="[[rootPath]]mexico-city">around Mexico City</a>
+          <a name="about-page" href="[[rootPath]]about-page">about the project</a>
           <iron-icon icon="favorite"></iron-icon>
           <iron-icon icon="favorite"></iron-icon>  
-          <h3>Buildings by Architect</h3>
+          <a><b>Buildings by Architect:</b></a>
+          <!-- <h3>Buildings by Architect</h3> -->
           <a name="augusto-alvarez" href="[[rootPath]]augusto-alvarez">Augusto H. Alvarez</a>
            <a name="agustin-hernandez" href="[[rootPath]]agustin-hernandez">Agustin Hernandez</a>
            <a name="luis-barragan" href="[[rootPath]]luis-barragan">Luis Barragan</a>
@@ -165,12 +168,11 @@
         </iron-selector>
 
 
-         <div class="bottom-class">
+<!--          <div class="bottom-class">
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
            <a name="about-page" href="[[rootPath]]about-page">about the project</a>
          </iron-selector>
-         </div>
-          <iron-icon icon="favorite"></iron-icon>
+         </div> -->
       </app-drawer>
 
       <!-- Main content -->

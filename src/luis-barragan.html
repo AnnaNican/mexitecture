@@ -26,6 +26,11 @@
             mapbox-gl {
             height: 50vh;
 
+            --mapboxgl-popup-content: {
+              max-width: 30em;
+
+            };
+
             --mapbox-gl-marker: {
               border: 1px solid #888;
               width:50;
@@ -38,8 +43,13 @@
               cursor: pointer;
             };
 
-            --mapbox-gl-popup: {
-              width: 50;
+            --mapboxgl-popup-content: {
+              width: 50px;
+            };
+
+            .mapboxgl-popup-content: {
+              max-width: 30em;
+
             };
 
 
@@ -73,7 +83,7 @@
       </div> -->
       <h1>Luis Barragan</h1>
       <p>​Luis Barragan is considered as the most prominent Mexican architect and as one of the major figures on the international field of architecture in the last century. The architecture of Luis Barragan is stunning, seductive and autobiographical.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+      <p>“I felt a pang of regret that those who know Barragán’s work only from the vivid flash cards tacked to virtual walls on Pinterest or Tumblr miss out on the experiential dimension of his architecture, its deep humanity.”  <a href="http://www.nytimes.com/by/guy-trebay">Guy Trebay</a> </p>
     </div>
 
     <div class="card">
@@ -106,7 +116,7 @@
       </mapbox-gl-marker>
       <mapbox-gl-popup close-button close-on-click for="casa-giraldi"
         latitude=19.4142 longitude=-99.1884
-        html="<b>Casa Giraldi</b><p>...">
+        html="<b>Casa Giraldi</b>is known for the huge jacaranda tree decorating its interior courtyard, and for a striking hallway with vertical apertures that bounce sunlight against brightly painted yellow walls and out into an electric blue room with an indoor pool.<p>">
       </mapbox-gl-popup>
 
 
@@ -151,6 +161,9 @@
 
     </div>
 
+    <div class="card">
+      <img src="/images/luis-barragan.jpeg" width=100%>
+    </div>
 
 
 
