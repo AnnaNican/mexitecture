@@ -3,6 +3,8 @@
 
 mexitecture is my effort to compile the most interesting milestones in the architecture of Mexico City. Please use the map below to explore the buildings, where they are located and a bit of history who have constructed them. While working on it, I have tried polymer and web-components.
 
+The project is hosted at https://mexitecture.com
+
 ### Run project
 
 To run the project locally
