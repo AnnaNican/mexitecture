@@ -1,12 +1,3 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
@@ -36,6 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="lazy-import" href="mario-pani.html">
 <link rel="lazy-import" href="ricardo-legorreta.html">
 <link rel="lazy-import" href="agustin-hernandez.html">
+<link rel="lazy-import" href="about-page.html">
 
 
 <dom-module id="my-app">
@@ -46,12 +38,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --app-secondary-color: #596778;
         --app-drawer-width: 40%;
 
+        font-family: sans-serif;
+        --icon-toggle-color: lightgrey;
+        --icon-toggle-outline-color: black;
+        --icon-toggle-pressed-color: red;
 
         display: block;
       }
 
+      iron-icon {
+        fill: var(--icon-toggle-color, red);
+        stroke: var(--icon-toggle-outline-color, currentcolor);
+      }
+
       app-drawer-layout:not([narrow]) [drawer-toggle] {
         display: none;
+        position: relative;
       }
 
       app-header {
@@ -90,6 +92,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         min-width: 50%;
       }
 
+
+      .h2.header {
+        span{
+        font-Family: 'Raleway', Sans-Serif;
+        color: black;
+        display: inline-block;
+        background: black;
+        padding: 1px 8px;
+        }
+
+      .h2.header
+      :before {
+           content: "\A";
+          white-space: pre;
+        }
+
+      .bottom-class{
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+        font-family: 'Raleway', Sans-Serif;
+        text-decoration:none;
+      }
+
+      a:-webkit-any-link {
+        text-decoration:none;
+        color: var(--app-secondary-color);
+      }
+
     </style>
 
     <app-location
@@ -106,18 +137,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <app-drawer-layout fullbleed narrow="{{narrow}}">
       <!-- Drawer content -->
-      <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
+      <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]" opened>
 
-        <app-toolbar>
-        <div class="logo">
-        stripe
-      </div></app-toolbar>
+      <app-toolbar>
+        <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
+        <div class="logo">stripe</div>
+        <h2 class="header" href="landing-page">mexitecture</h2>
+
+      </app-toolbar>
+
+
+
+
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-<!--           <a name="view1" href="[[rootPath]]view1">View One</a>
-          <a name="view2" href="[[rootPath]]view2">View Two</a>
-          <a name="view3" href="[[rootPath]]view3">View Three</a> -->
           <!-- <a name="landing-page" href="[[rootPath]]landing-page">Landing</a> -->
-          <a name="mexico-city" href="[[rootPath]]mexico-city">Around Mexico City</a>  
+          <a name="mexico-city" href="[[rootPath]]mexico-city">around Mexico City</a>
+          <iron-icon icon="favorite"></iron-icon>
+          <iron-icon icon="favorite"></iron-icon>  
           <h3>Buildings by Architect</h3>
           <a name="augusto-alvarez" href="[[rootPath]]augusto-alvarez">Augusto H. Alvarez</a>
            <a name="agustin-hernandez" href="[[rootPath]]agustin-hernandez">Agustin Hernandez</a>
@@ -126,8 +162,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a name="pedro-ramirez-vasquez" href="[[rootPath]]pedro-ramirez-vasquez">Pedro Ramírez Vázquez</a>
           <a name="ricardo-legorreta" href="[[rootPath]]ricardo-legorreta">Ricardo Legorreta</a>
           <a name="teodoro-de-leon" href="[[rootPath]]teodoro-de-leon">Teodoro González de León</a>
-          <div>about project</div>
         </iron-selector>
+
+
+         <div class="bottom-class">
+          <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+           <a name="about-page" href="[[rootPath]]about-page">about the project</a>
+         </iron-selector>
+         </div>
+          <iron-icon icon="favorite"></iron-icon>
       </app-drawer>
 
       <!-- Main content -->
@@ -136,18 +179,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header slot="header" condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
+            <div main-title>mexitecture</div>
           </app-toolbar>
         </app-header> -->
 
-        <iron-pages
-            selected="[[page]]"
-            attr-for-selected="name"
-            fallback-selection="view404"
-            role="main">
-<!--           <my-view1 name="view1"></my-view1>
-          <my-view2 name="view2"></my-view2>
-          <my-view3 name="view3"></my-view3> -->
+        <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
           <landing-page name="landing-page"></landing-page>
           <mexico-city name="mexico-city"></mexico-city>
           <luis-barragan name="luis-barragan"></luis-barragan>
@@ -157,6 +193,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <mario-pani name="mario-pani"></mario-pani>
           <ricardo-legorreta name="ricardo-legorreta"></ricardo-legorreta>
           <agustin-hernandez name="agustin-hernandez"></agustin-hernandez>
+          <about-page name="about-page"></about-page>
           <my-view404 name="view404"></my-view404>
         </iron-pages>
       </app-header-layout>
