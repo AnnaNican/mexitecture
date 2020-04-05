@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "My App",
-  "description": "My App description",
+  "name": "mexitecture",
+  "short_name": "mexitecture",
+  "description": "Mexitecture is an effort to compile the most interesting milestones in the architecture of Mexico City",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
