@@ -19,6 +19,12 @@
         display: block;
 
         padding: 10px;
+/*        --bg: #fdfdfd;
+        --highlight1: #2E71B4;
+        --highlight2: #EB9451;
+        --color: #1a1e24;*/
+
+
       }
 
 
@@ -46,14 +52,18 @@
             --mapboxgl-popup {
               width: 20%;
             }
-        }
+        }; 
+        };
+
+
+
+
 
     </style>
 
     <div class="card">
-      <!-- <div class="circle">2</div> -->
-      <h1>mexitecture</h1>
-      <h3>Exploring architecture around Mexico city</h3>
+      <div class="logo">stripe</div>
+      <h3>Exploring architecture around Mexico City</h3>
       <p>mexitecture is my effort to compile the most interesting milestones in the architecture of Mexico City. Please use the map below to explore the buildings, where they are located and a bit of history who have constructed them. </p>
     </div>
 
@@ -168,8 +178,6 @@
         html="<b>Ciudad Universitaria</b> is an open place popular on Sundays with families that wish to explore its patios, gardens and footpaths that cover most of its 1,000 hectares (2,500 acres). It was built on a lava layer 6 to 8 metres (20 to 26 ft) thick which was deposited by the Xitle volcano around 100 AD.">
       </mapbox-gl-popup>
 
-
-
 <!-- vasquez -->
     <mapbox-gl-marker id="building-41"
         latitude=19.4298 longitude=-99.16594
@@ -216,7 +224,6 @@
         html="<b>Mercado de Coyoacán</b>  besides being an icon of the neighbourhood has practical construction with hyperbolic paraboloids used for the market rood that play with different folds and light openings that serve both to iluminate the interior and to channel air circulation to the outside.">
       </mapbox-gl-popup>
 
-
 <!-- legorreta -->
 
         latitude=19.4116 longitude=-99.1969>
@@ -254,7 +261,6 @@
         html="<b>Corporativo Televisa</b> concieved with great sculptural sense it consists of different building blocks, each places emphasis on natural illumination, and the creation of views onto the extensive tree-filled gardens.">
       </mapbox-gl-popup>
 
- 
 
 <!-- deleon -->
 
@@ -336,7 +342,6 @@
         latitude=19.3867 longitude=-99.2538
         html="<b>Torre Arcos Bosques II</b> complex is called 'pair of pants' with towers joined in between and regular repition of windows creating unsuaul contemporary shapes.">
       </mapbox-gl-popup>
-
 
 <!-- standalone -->
 
@@ -425,6 +430,29 @@
 
 
     </div>
+
+
+    <div class="card">
+      <ol class="gradient-list">
+        <li class="item">
+          <h2 class="headline">Biblioteca Vasconcelos</h2>
+          <p>Architect: Alberto Kalach</p>
+          <span>The Vasconcelos Library is a massive structure of concrete, glass, and steel that is unlike anything else in the city. Artist Gabriel Orozco’s sculpture of a whale skeleton hangs from the ceiling at the center of the library, which harbors over 600,000 books, magazines, and newspapers. 
+          </span>
+          </li>
+        <li class="item">
+        <h2 class="headline">Iglesia Jose Maria Escriva</h2>
+          <p>Architect: Alberto Kalach</p>
+          <span>The church is defined by the lines of two eclipses, in representation of the traditional Crystian symbol, the fish. These curves are inscribed in seven golden rectangles, forming two warped surfaces that rise and converge to create a diagonal cross oriented towards the north that allows light into the building. 
+          </span>
+         </li> 
+
+      </ol>
+
+
+    </div>
+
+
 
   </template>
 
